@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //Funciones sin retorno
+        function fnPrueba1(xValor){
+            document.writeln("Mensaje desde... " + xValor);     //Mostrar en navegador
+        }
+        const fnPrueba2 = (xValor) => {
+            document.writeln("Mensaje desde... " + xValor);     //Mostrar en navegador
+        }
+
+        //FUNCIONES CON RETORNO
+        function fnPrueba3(xValor){
+            document.writeln("Mensaje desde..." + xValor);      //Mostar en navegador
+            return "Hola..... fn con retorno";
+        }
+        const fnPrueba4 = (xValor) => {
+            document.writeln("Mensaje desde... " + xValor);     //Mostrar en navegador
+            return "Hola... fn FLECHA con retorno";             //Retorno
+        }
+
+        //OTRAS FORMAS DE DEFINIR LA FUNCION FLECHA
+        const fnPrueba5 = (xValor) => document.writeln("Mensaje desde... " + xValor);   //error
+        const fnPrueba6 = (xValor) => ("Hola... fn FLECHA con retorno");                //correcto
+    </script>
+</head>
+<body>
+    <h1>Definicion de funciones</h1>
+    <button type="button" onclick="fnPrueba1('1. FN sin retorno');">1. Funcion sin retorno</button> <br/>
+    <button type="button" onclick="fnPrueba2('2. FN flecha sin retorno');">2. Funcion flecha sin retorno</button> <br/>
+    <button type="button" onclick="alert(fnPrueba3('3. FN con retorno'));">3. Funcion con retorno</button> <br/>
+    <button type="button" onclick="alert(fnPrueba4('4. FN flecha con retorno'));">4. Funcion flecha con retorno</button> <br/>
+    <button type="button" onclick="alert(fnPrueba5('5. FN flehca sin retorno simple'));">5. Funcion flecha con retorno simple</button> <br/>
+    <button type="button" onclick="alert(fnPrueba6('6. FN flecha con retorno simple'));">6. Funcion flecha con retorno simple</button> <br/>
+</body>
+</html>

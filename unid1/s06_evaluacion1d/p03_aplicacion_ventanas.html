@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/estilosEval1.css">
+	<script src="js/arrayAlumnos.js"></script>
+	<script src="js/form03funcion.js"></script>
+</head>
+<body>
+	<h1>Aplicación 3 - Ventanas</h1>
+	<div id="content">
+	<script>
+	var valor = prompt("Cuantos estudiantes de ambos turnos desea ver", 1);
+	
+	if(valor > 0 && valor <= alumnos.length){ 
+		for (var i = 0; i < valor; i++) {
+			
+			res = (i+1) + " de " + alumnos.length;
+			num = alumnos[i][0];	//Numero de orden
+			nom = alumnos[i][1];	//Nombre
+			ape = alumnos[i][2];	//apellido
+			tur = alumnos[i][3];	//Turno
+			gen = alumnos[i][4];
+			
+			fnGenerarTabla(res,num,nom,ape,tur,gen);
+		}
+	}
+		 
+	</script>
+
+	</div>
+</body>
+</html>

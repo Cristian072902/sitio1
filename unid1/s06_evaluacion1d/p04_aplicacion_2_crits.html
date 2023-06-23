@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/estilosEval1.css">
+    <script src="js/form04funciones.js"></script>
+    <script src="js/arrayAlumnos.js"></script>
+</head>
+<body>
+    <div id="content">
+        <form action="p00_validada.php">
+            <table>
+                <tr>
+                    <th colspan="2" class="titulo">Aplicación 7 - Formulario Lista con 1 criterio</th> <!--colspan combinacion de celdas horizontal-->
+                </tr>
+                <tr>
+                    <td id="tdIzq">Seleccionar turno:</td>
+                    <td id="tdDer">
+                        <select name="lstTurno" id="lstTurno" onchange="verTablas(this.value, document.getElementById('lstGenero').value, alumnos)"> <!--this.value = dejar ese valor -->
+                            <option value="">Seleccione...</option>
+                            <option value="M">Turno Día</option>
+                            <option value="N">Turno Noche</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="tdIzq">Seleccionar género:</td>
+                    <td id="tdDer">
+                        <select name="lstGenero" id="lstGenero" onchange="verTablas(document.getElementById('lstTurno').value, this.value, alumnos)">
+                            <option value="">Seleccione...</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2"><div name="marco" id="marco">Resultado aquí...</div></td>
+                </tr>
+                <th colspan="2" class="subTitulo">   <!--colspan combinacion de celdas horizontal-->
+                    <input class="boton" type="reset" name="btnVer" onclick="borrarMarco();" value="Borrar">
+                </th>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

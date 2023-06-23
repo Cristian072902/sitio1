@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Documento sin titulo</title>
+        <style>
+            td{background-color: palegreen;}
+            #xBorde{border: 3px dashed skyblue;}
+            .xForma{font-size: 32px; color: purple;}   
+        </style>
+    </head>
+    <body>
+        <h1>Tabla 3 x 4</h1>
+        <table border="1">
+            <tr>
+                <td colspan="4">Fila1_Colum1</td>
+<!--
+                <td>Fila1_Colum2</td>
+                <td>Fila1_Colum3</td>
+                <td>Fila1_Colum4</td>  -->
+            </tr>
+            <tr>
+                <td>Fila2_Colum1</td>
+                <td rowspan="2">Fila2_Colum2</td>
+                <td id="xBorde">Fila2_Colum3</td>
+                <td>Fila2_Colum4</td>
+            </tr>
+            <tr>
+                <td>Fila3_Colum1</td>
+<!--            <td>Fila3_Colum2</td>        -->
+                <td>Fila3_Colum3</td>
+                <td class="xForma">Fila3_Colum4</td>
+            </tr>
+        </table>
+    </body>
+</html>

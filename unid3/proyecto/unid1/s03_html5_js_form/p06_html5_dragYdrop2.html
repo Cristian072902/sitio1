@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Drag & drop</title>
+        <link rel="stylesheet" type="text/css" href="estilo.css">
+        <script src="rr/dragYdrop2.css" type="text/javascript"></script>
+        <link href="rr/dragYdrop2.css" rel="stylesheet" type="text/css">
+    </head>
+    <body onload="comprobarnavegador();">
+        <head>
+            <h1> Un puzzle de de cuatro piezzas </h1>
+        </head>
+
+        <section id="contenedor Puzzle">
+            <div id="contenedor Puzzle" ondragenter="return enter(event)" ondragover="return over(event)" ondrop="return drop(event)">
+                <img id="pieza3" src="rr/pieza3.jpg" alt="pieza3" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                <img id="pieza2" src="rr/pieza2.jpg" alt="pieza2" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                <img id="pieza4" src="rr/pieza4.jpg" alt="pieza4" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+                <img id="pieza1" src="rr/pieza1.jpg" alt="pieza1" draggable="true" ondragstart="start(event)" ondragend="end(event)">
+            </div>
+            <div id="puzzle">
+                <div class="contenerdorPieza" id="uno" ondragenter="return enter(event)" ondragover="return over(event)"  ondrop="return drop(event)"></div>
+                <div class="contenerdorPieza" id="dos" ondragenter="return enter(event)" ondragover="return over(event)"  ondrop="return drop(event)"></div>
+                <div class="contenerdorPieza" id="tres" ondragenter="return enter(event)" ondragover="return over(event)"  ondrop="return drop(event)"></div>
+                <div class="contenerdorPieza" id="cuatro" ondragenter="return enter(event)" ondragover="return over(event)"  ondrop="return drop(event)"></div>
+            </div>
+        </section>
+    </body>
+</html>
